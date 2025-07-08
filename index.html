@@ -41,7 +41,7 @@
       const inicioIso = new Date(inicio + "T00:00:00.000Z").toISOString();
       const fimIso = new Date(fim + "T23:59:59.999Z").toISOString();
 
-      const res = await fetch("https://SEU-WEBHOOK.n8n.cloud/webhook-prod/relatorio", {
+      const res = await fetch("http://localhost:5678/webhook-test/relatorio", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ cliente, inicio: inicioIso, fim: fimIso })
